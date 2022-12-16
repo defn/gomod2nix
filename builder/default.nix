@@ -115,6 +115,7 @@ let
       (
         ''
           mkdir vendor
+          chmod 0755 vendor
 
           export GOCACHE=$TMPDIR/go-cache
           export GOPATH="$TMPDIR/go"
