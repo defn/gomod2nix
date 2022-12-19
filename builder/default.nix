@@ -452,5 +452,5 @@ let
 
 in
 {
-  inherit buildGoApplication mkGoEnv;
+  inherit buildGoApplication mkGoEnv mkGoVendorEnv;
 }
