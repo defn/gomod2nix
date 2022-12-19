@@ -160,6 +160,22 @@ let
       (substring 6 2 d)
     ]);
 
+  mkGoVendorEnv =
+    { pwd
+    }@attrs:
+    let
+      goMod = parseGoMod (readFile "${toString pwd}/go.mod");
+      modulesStruct = fromTOML (readFile "${toString pwd}/gomod2nix.toml");
+
+      go = selectGo attrs goMod;
+
+      vendorEnv = mkVendorEnv {
+        inherit go modulesStruct pwd goMod;
+      };
+
+    in
+    vendorEnv;
+
   mkGoEnv =
     { pwd
     }@attrs:
