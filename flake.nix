@@ -1,7 +1,7 @@
 {
   description = "Convert go.mod/go.sum to Nix packages";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs?rev=64c27498901f104a11df646278c4e5c9f4d642db"; # sync with defn/pkg/godev
 
   inputs.utils.url = "github:numtide/flake-utils";
 
