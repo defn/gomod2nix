@@ -3,7 +3,7 @@
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs?rev=64c27498901f104a11df646278c4e5c9f4d642db"; # sync with defn/pkg/godev
 
-  inputs.utils.url = "github:numtide/flake-utils";
+  inputs.utils.url = "github:numtide/flake-utils?rev=04c1b180862888302ddfb2e3ad9eaa63afc60cf8"; # sync with defn/pkg/dev
 
   outputs = { self, nixpkgs, utils }:
     {
